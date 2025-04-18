@@ -75,7 +75,7 @@ USING TO_DATE(date, 'DD-MM-YYYY');
 ```
 **Pro Tip :** To avoid these issues altogether, you can clean and prepare your data in `Excel` before importing it into PostgreSQL.
 
-**5. ➡️Replace `"null"` with SQL `NULL`**
+### **5. ➡️Replace `"null"` with SQL `NULL`**
 
 To ensure a smooth data type conversion, first check if the column contains string representations of null values (e.g., `"null"`) and convert them to SQL `NULL`.
 This ensures that non-numeric values won't cause `errors` during the conversion process.
@@ -194,7 +194,7 @@ FROM bookings
 WHERE vehicle_type = 'Prime Sedan' AND driver_ratings IS NOT NULL
 GROUP BY vehicle_type;
 ```
-If you had skipped steps **[`5 and 6 of data preparation`]()**, you could still achieve the desired results using the SQL query below:
+If you had skipped steps **[`5 and 6 of data preparation`](#5-%EF%B8%8Freplace-null-with-sql-null)**, you could still achieve the desired results using the SQL query below:
 ```sql
 CREATE OR REPLACE VIEW maximum_and_minimum_driver_ratings_for_Prime_Sedan AS
 SELECT vehicle_type,
