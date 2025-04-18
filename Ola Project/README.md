@@ -46,7 +46,7 @@ CREATE TABLE bookings (
     customer_rating TEXT);
 
 ```
-**2. 📥Import the Data into the Staging Table:**
+**2. 📥Import the [Data](https://github.com/saurabhtikadar/SQL-Projects/blob/main/Ola%20Project/Bookings.csv) into the Staging Table:**
 
 Use the `COPY` command to load the data into the staging table.
 ```sql
@@ -57,7 +57,7 @@ CSV HEADER;
 ```
 **3. 📇Extract the Date from the `Date Column`**
 
-If the `date_column` in your `bookings.csv` file contains both date and time (e.g., `"26-07-2024 14:00"`), and you want to change its data type to `DATE`,
+If the `date_column` in your [bookings.csv](https://github.com/saurabhtikadar/SQL-Projects/blob/main/Ola%20Project/Bookings.csv) file contains both date and time (e.g., `"26-07-2024 14:00"`), and you want to change its data type to `DATE`,
 you will face an issue because the `DATE` data type cannot store time information. To handle this:
 ```sql
 UPDATE bookings
